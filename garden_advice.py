@@ -4,7 +4,10 @@
 # =========================================================
 
 
-# Function for seasonal advice
+# ---------------------------------------------------------
+# Function: seasonal_advice
+# Displays gardening advice based on the season
+# ---------------------------------------------------------
 def seasonal_advice(season):
 
     if season == "Summer":
@@ -24,7 +27,10 @@ def seasonal_advice(season):
         print("Trim dead leaves and branches.")
 
 
-# Function for monthly advice
+# ---------------------------------------------------------
+# Function: monthly_advice
+# Displays gardening advice based on the month
+# ---------------------------------------------------------
 def monthly_advice(month):
 
     if month == "January":
@@ -34,10 +40,14 @@ def monthly_advice(month):
         print("June is ideal for pruning trees.")
 
 
-# Variables
+# Store current season
 season = "Summer"
+
+# Store current month
 month = "January"
 
-# Run functions
+# Execute seasonal advice
 seasonal_advice(season)
+
+# Execute monthly advice
 monthly_advice(month)
