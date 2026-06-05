@@ -1,14 +1,24 @@
-# garden_advice.py
-# A simple app that provides gardening tips based on the current month and season.
+"""
+garden_advice.py
 
-# TODO: Add a module-level docstring describing what this program does
+A simple gardening advice app that provides tips based on the
+current month and season.
+"""
 
 import datetime
 
 # TODO: Replace these hardcoded month-to-season mappings with a dictionary or function
 
 def get_season(month):
-    # TODO: Add a docstring to this function explaining its parameters and return value
+    """
+    Determine the season based on a given month number.
+
+    Args:
+        month (int): The month as an integer (1-12).
+
+    Returns:
+        str: The name of the current season.
+    """
     if month in [12, 1, 2]:
         return "Summer"      # Southern Hemisphere
     elif month in [3, 4, 5]:
@@ -19,7 +29,15 @@ def get_season(month):
         return "Spring"
 
 def get_advice(season):
-    # TODO: Add a docstring to this function
+    """
+    Return gardening advice for a given season.
+
+    Args:
+        season (str): The name of the season.
+
+    Returns:
+        str: A gardening tip relevant to that season.
+    """
     # TODO: Consider moving advice strings into a dictionary instead of if/elif chain
     if season == "Summer":
         advice = "Water your plants early in the morning or late evening to reduce evaporation. Watch out for pests."
