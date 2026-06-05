@@ -7,7 +7,6 @@ current month and season.
 
 import datetime
 
-# TODO: Replace these hardcoded month-to-season mappings with a dictionary or function
 
 def get_season(month):
     """
@@ -20,13 +19,14 @@ def get_season(month):
         str: The name of the current season.
     """
     if month in [12, 1, 2]:
-        return "Summer"      # Southern Hemisphere
+        return "Summer"
     elif month in [3, 4, 5]:
         return "Autumn"
     elif month in [6, 7, 8]:
         return "Winter"
     else:
         return "Spring"
+
 
 def get_advice(season):
     """
@@ -51,12 +51,17 @@ def get_advice(season):
         advice = "No advice available for this season."
     return advice
 
-# TODO: Wrap the main logic in a main() function and use if __name__ == "__main__"
 
-current_month = datetime.datetime.now().month
-current_season = get_season(current_month)
-advice = get_advice(current_season)
+def main():
+    """Run the gardening advice app."""
+    current_month = datetime.datetime.now().month
+    current_season = get_season(current_month)
+    advice = get_advice(current_season)
 
-print(f"Current month: {current_month}")
-print(f"Season: {current_season}")
-print(f"Gardening advice: {advice}")
+    print(f"Current month: {current_month}")
+    print(f"Season: {current_season}")
+    print(f"Gardening advice: {advice}")
+
+
+if __name__ == "__main__":
+    main()
