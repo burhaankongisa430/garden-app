@@ -38,6 +38,7 @@ def get_advice(season):
     Returns:
         str: A gardening tip relevant to that season.
     """
+    # TODO: Consider moving advice strings into a dictionary instead of if/elif chain
     if season == "Summer":
         advice = "Water your plants early in the morning or late evening to reduce evaporation. Watch out for pests."
     elif season == "Autumn":
